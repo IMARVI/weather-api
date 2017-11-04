@@ -1,0 +1,45 @@
+{
+  "name": "Usuario",
+  "plural": "Usuarios",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "activo": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "role": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "email": {
+      "type": "string"
+    },
+    "pass": {
+      "type": "string",
+      "required": true
+    },
+    "ciudadesFav": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
