@@ -1,0 +1,12 @@
+{
+  "weather-chat": {
+    "host": "isaiasmarvi",
+    "port": 27017,
+    "url": "mongodb://isaiasmarvi:isaiasmarvi@ds245755.mlab.com:45755/weatherbot",
+    "database": "weatherbot",
+    "password": "isaiasmarvi",
+    "name": "weather-chat",
+    "user": "isaiasmarvi",
+    "connector": "mongodb"
+  }
+}
