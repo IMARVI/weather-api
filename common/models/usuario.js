@@ -15,6 +15,15 @@ module.exports = function(Usuario) {
     });
   }
 
+  Usuario.login = function(email, cb) {
+    console.log(email);
+    var resp = [];
+    Usuario.find({where : {email:email}}, function(err,response){
+      console.log(response);
+      cb(null,response);
+    });
+  }
+
   Usuario.remoteMethod('disponibilidad', {
         accepts: {arg: 'email',
         type: 'string',
@@ -23,4 +32,13 @@ module.exports = function(Usuario) {
         returns: {arg: 'disponible', type: 'boolean'},
         http: {path:'/disponibilidad', verb: 'get'}
   });
+
+  Usuario.remoteMethod('login', {
+    accepts: {arg: 'email',
+    type: 'string',
+    required: true
+  },
+    returns: {arg: 'usr', type: 'Usuario'},
+    http: {path:'/login', verb: 'get'}
+});
 };
